@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
         add_end(&head, atoi(argv[count]));
         count++;
     }
-    print_list(head);
+    //print_list(head);
 }
 void add_end(node ** head, int n)
 {
@@ -45,5 +45,21 @@ void print_list(node *head)
     {
         printf("%i\n", head->number);
         head = head->next;
+    }
+}
+void sort_list(node *head, int count)
+{
+    /* make new list*/
+    node *new = NULL; 
+    /*loop over all list*/
+    int min = head->number;
+    while (head != NULL)
+    {
+        if (head-> number < min)
+        {
+            add_end(&new, head->number);
+            min = head->number;
+        }
+        head =  head->next;
     }
 }
