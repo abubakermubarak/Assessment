@@ -21,10 +21,15 @@ int main(int argc, char *argv[])
         add_end(&head, atoi(argv[count + 1][0]));
         count++;
     }
+    print_list(head);
 }
 void add_end(node ** head, int n)
 {
     node *new = malloc(sizeof(node));
+    if (new == NULL)
+    {
+        return NULL;
+    }
     new->number = n;
     new->next = NULL;
 
@@ -33,4 +38,12 @@ void add_end(node ** head, int n)
         *head = new;
     }
     free(new);
+}
+void print_list(node *head)
+{
+    while (head != NULL)
+    {
+        printf("i\n", head->number);
+        head = head->next;
+    }
 }
