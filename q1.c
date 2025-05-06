@@ -51,15 +51,23 @@ void sort_list(node *head, int count)
 {
     /* make new list*/
     node *new = NULL; 
+    node *p = head;
+    node *track;
     /*loop over all list*/
     int min = head->number;
-    while (head != NULL)
+    while (count > 0)
     {
-        if (head-> number < min)
+        while (p != NULL)
         {
-            add_end(&new, head->number);
-            min = head->number;
+            if (p-> number < min)
+            {
+                
+                min = p->number;
+                track = &p
+            }
+            p =  p->next;
         }
-        head =  head->next;
+        add_end(new, min);
+        
     }
 }
