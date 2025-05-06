@@ -32,7 +32,7 @@ void add_end(node ** head, int n)
     }
     new->number = n;
     new->next = NULL;
-
+    printf("%i\n", new->number);
     if (*head == NULL)
     {
         *head = new;
