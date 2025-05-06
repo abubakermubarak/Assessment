@@ -8,7 +8,7 @@ typedef struct node
 }node;
 
 void add_end(node ** head, int n);
-
+void print_list(node *head);
 int main(int argc, char *argv[])
 {
 
